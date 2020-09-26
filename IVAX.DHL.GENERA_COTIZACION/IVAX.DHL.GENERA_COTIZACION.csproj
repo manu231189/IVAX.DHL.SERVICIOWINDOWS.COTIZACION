@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\ECotizacion.cs" />
+    <Compile Include="Entidades\ECotizacionDetalle.cs" />
     <Compile Include="Service1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -55,6 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\IVAX.DHL.GENERA_COTIZACION.Entidades.ECotizacion.datasource" />
+    <None Include="Properties\DataSources\IVAX.DHL.GENERA_COTIZACION.Entidades.ECotizacionDetalle.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\rptCotizacion.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
