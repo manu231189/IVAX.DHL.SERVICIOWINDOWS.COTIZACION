@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IVAX.DHL.GENERA_COTIZACION.Entidades;
+using Microsoft.Reporting.WebForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,16 @@ namespace IVAX.DHL.GENERA_COTIZACION
 
         protected override void OnStop()
         {
+        }
+
+        public void GeneraReporte(ECotizacion eCotizacion,List<ECotizacionDetalle> eCotizacionDetalles)
+        {
+            ReportViewer reportCotiza = new ReportViewer();
+            reportCotiza.ProcessingMode = ProcessingMode.Local;
+            string ruta = AppDomain.CurrentDomain.BaseDirectory + "/Reportes/rptCotizacion";
+            reportCotiza.LocalReport.ReportPath = ruta;
+            reportCotiza.LocalReport.DataSources.Clear();
+
         }
     }
 }
